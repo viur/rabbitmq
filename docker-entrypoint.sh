@@ -68,7 +68,7 @@ if [ "$1" = 'rabbitmq-server' ]; then
 			        { keyfile,    "$RABBITMQ_SSL_KEY_FILE" },
 			        { cacertfile, "$RABBITMQ_SSL_CA_FILE" },
 			        { verify,   verify_peer },
-			        { fail_if_no_peer_cert, true } ] },
+			        { fail_if_no_peer_cert, false } ] },
 			EOS
 		else
 			cat >> /etc/rabbitmq/rabbitmq.config <<-EOS
